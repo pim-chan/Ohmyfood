@@ -1,0 +1,25 @@
+.icon__container {
+    position: relative;
+    z-index: 1;
+}
+
+.icon__like {
+    width: 22px;
+    overflow: visible;
+    stroke-width: 15px;
+    fill: transparent;
+    stroke: black;
+}
+
+.checkbox--hidden {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox--hidden:checked + .icon__like {
+    fill: url(#LinearGradient);
+    stroke: url(#LinearGradient);
+}

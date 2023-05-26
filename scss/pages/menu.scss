@@ -1,0 +1,220 @@
+@use'../base/fonts' as *;
+@use'../components/' as *;
+@use '../layouts' as *;
+@use '../utils' as *;
+
+
+body {
+@include body; 
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+.ban {
+    height: 275px;
+    width: 100%;
+    z-index: 1;
+    &__img {
+        width: 100%;
+        min-height: 270px;
+        max-height: 383px;
+        object-fit: cover;
+    }
+}
+
+.menu_footer__container {
+    width: 100%;
+    position: absolute;
+    top: 280px;
+    z-index: 2;
+}
+
+.menu {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 32px 17px 40px;
+    background-color: $background-color1;
+    border-radius: 30px 30px 0 0;
+    &__categories_container {
+        @include column-direction; 
+        gap: 40px;
+        margin-top: 40px;
+    }
+}
+
+.menu__title {
+    @include row-center-direction;
+    flex-wrap: wrap;
+    gap: 24px;
+    h2 {
+        margin: 0;
+        font-family: $font2;
+        font-size: $pm-menu-title;
+        white-space: nowrap;
+    }
+}
+
+.menu__category__title {
+    width: 40px;
+    font-family: $font1-thin;
+    font-size: $text;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 3px solid $background-color3;
+}
+    
+.container {
+    @include row-direction;
+}
+
+.dish__card {
+    display: flex;
+    margin-top: 12px;
+    background-color: $color2;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    &__text {
+        @include column-direction; 
+        gap: 5px;
+        flex-grow: 1;
+        min-width: 100px;
+        background-color: white;
+        padding: 12px 15px;
+        p, h4 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+} 
+
+.card_title {
+    font-size: $pm-card-title;
+}
+
+.card_description {
+    font-family: $font1-thin;
+    font-size: $pm-card-description;
+}
+
+.text {
+    font-size: $pm-text;
+}
+    
+.card_price {
+    font-family: $font1-medium;
+    padding: 0 24px 12px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.checkbox {
+    &:checked {
+        & + .slide_content {
+            width: 110px;
+        }
+    }
+}
+
+.checkbox--hidden {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.slide_content {
+    display: flex;
+    width: 40px;
+    transition: all 300ms;
+}
+
+// .checkbox--hidden:checked + .slide_content {
+
+// }
+
+.check {
+    width: 59px;
+    background-color: $background-color3;
+    border-radius: 0px 15px 15px 0px;
+    position: relative;
+    &:after {
+        content: url(/assets/images/icons/Check.png);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.btn {
+    display: block;
+    margin: 0 auto ;
+}
+
+@media (min-width: 768px) {
+    .ban {
+        height: 383px;
+    }
+
+    .menu_footer__container {
+        top: 415px;
+    }
+
+    .menu__categories_container {
+        width: 80%;
+        margin: 40px auto 0;
+    }
+
+    .menu {
+        width: 80%;
+        padding: 32px 0 40px;
+        margin: 0 auto;
+    }
+
+    .menu__title {
+        text-align: center;
+    }
+
+    .checkbox--hidden:hover + .slide_content {
+        width: 110px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .ban {
+        height: 383px;
+    }
+
+    .menu_footer__container {
+        top: 415px;
+    }
+
+    .menu__categories_container {
+        width: 65%;
+        margin: 40px auto 0;
+    }
+
+    .menu {
+        width: 70%;
+        padding: 32px 0 40px;
+        margin: 0 auto;
+    }
+
+    .menu__title {
+        text-align: center;
+    }
+
+    .checkbox--hidden:hover + .slide_content {
+        width: 110px;
+    }
+}
+
+
+
+
+
