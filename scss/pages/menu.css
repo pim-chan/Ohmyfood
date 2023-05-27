@@ -218,7 +218,7 @@ h1, h2, h3, h4, p {
   flex-wrap: wrap;
   gap: 24px;
 }
-.menu__title h2 {
+.menu__title h1 {
   margin: 0;
   font-family: font2, sans-serif;
   font-size: 1.75rem;
