@@ -43,7 +43,7 @@
   color: white;
   padding: 22px 25px;
 }
-.footer .footer__title {
+.footer__title {
   font-family: font2, sans-serif;
   font-size: 1.125rem;
   margin: 0 0 16px;
@@ -140,11 +140,10 @@
   opacity: 0.85;
 }
 
-.icon__container {
+.icon {
   position: relative;
   z-index: 1;
 }
-
 .icon__like {
   width: 22px;
   overflow: visible;
@@ -153,7 +152,7 @@
   stroke: black;
 }
 
-.checkbox-hidden {
+.icon__checkbox-hidden {
   width: 22px;
   height: 22px;
   margin: 0;
@@ -161,7 +160,7 @@
   opacity: 0;
 }
 
-.checkbox-hidden:checked + .icon__like {
+.icon__checkbox-hidden:checked + .icon__like {
   fill: url(#LinearGradient);
   stroke: url(#LinearGradient);
 }
@@ -185,7 +184,7 @@
     z-index: -1;
   }
 }
-.loading_container {
+.loading-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,7 +200,7 @@
   width: 235px;
 }
 
-.hearts_container {
+.hearts-container {
   display: flex;
   gap: 15px;
 }
@@ -249,27 +248,27 @@ body {
   position: relative;
 }
 
-.section_title {
+.section-title {
   margin: 0;
   font-family: font1-bold, sans-serif;
   font-size: 1.5rem;
 }
 
-.section_subtitle {
+.section-subtitle {
   margin: 0;
   font-family: font1-thin, sans-serif;
   font-size: 1.125rem;
 }
 
-.card_title {
+.card-title {
   font-size: 1.125rem;
 }
 
-.card_description {
+.card-description {
   font-size: 1.063rem;
 }
 
-.card_text {
+.card-text {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -279,13 +278,13 @@ body {
   font-size: 1rem;
 }
 
-.card_content {
+.card-content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.card_link {
+.card-link {
   display: block;
   width: 100%;
   height: 100%;
@@ -311,7 +310,7 @@ header {
   gap: 17px;
 }
 
-.location__text {
+.location .text {
   font-family: font1-medium, sans-serif;
 }
 
@@ -319,10 +318,6 @@ header {
   background-color: #F6F6F6;
   padding: 40px 20px 57px;
 }
-.ban__title {
-  text-align: center;
-}
-
 .ban__content {
   display: flex;
   flex-direction: column;
@@ -330,7 +325,8 @@ header {
   justify-content: center;
   text-align: center;
 }
-.ban__content__subtitle {
+
+.ban__content .section-subtitle {
   text-align: center;
   margin: 15px 0 27px;
   font-family: font1-thin, sans-serif;
@@ -339,6 +335,7 @@ header {
 .functioning {
   padding: 48px 25px 68px;
 }
+
 .functioning__card {
   position: relative;
   padding: 27px 25px 27px 29px;
@@ -347,8 +344,7 @@ header {
   background-color: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-
-.functioning__card__number {
+.functioning__card > .icon-number {
   padding: 4px 8px;
   background-color: #9356DC;
   font-family: font1-medium, sans-serif;
@@ -360,7 +356,7 @@ header {
   transform: translateX(-50%);
 }
 
-.functioning__card__text {
+.functioning__card .text {
   margin: 0 0 0 25px;
 }
 
@@ -368,7 +364,7 @@ header {
   padding: 55px 25px 66px;
   background-color: #EAEAEA;
 }
-.restaurants__cards_container {
+.restaurants__cards-container {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
@@ -412,23 +408,23 @@ header {
   color: black;
 }
 
-.title-container {
+.card-title-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.title-container > .card-title {
+.card-title-container > .card-title {
   font-family: font1-bold, sans-serif;
   margin: 0;
 }
 
-.restaurants__card__subtitle {
+.restaurants .card-description {
   font-family: font1-thin, sans-serif;
   margin: 0;
 }
 
-.icon__container {
+.icon-like {
   position: relative;
 }
 
@@ -451,12 +447,12 @@ header {
     margin: 0 auto;
     width: 90%;
   }
-  .functioning__cards_container {
+  .functionning__cards-container {
     display: flex;
     justify-content: space-between;
     gap: 25px;
   }
-  .functioning__card {
+  .functionning__cards-container > .functioning__card {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -471,7 +467,7 @@ header {
     margin: 0 auto;
     width: 90%;
   }
-  .restaurants__cards_container {
+  .restaurants__cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px 60px;
@@ -485,12 +481,12 @@ header {
     margin: 0 auto;
     width: 75%;
   }
-  .functioning__cards_container {
+  .functionning__cards-container {
     display: flex;
     justify-content: space-between;
     gap: 25px;
   }
-  .functioning__card {
+  .functionning__cards-container > .functionning__card {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -504,7 +500,7 @@ header {
     margin: 0 auto;
     width: 75%;
   }
-  .restaurants__cards_container {
+  .restaurants__cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px 100px;

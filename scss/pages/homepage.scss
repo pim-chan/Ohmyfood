@@ -29,7 +29,7 @@
 }
 
 
-.loading_container{
+.loading-container{
     @include column-center-direction;
     gap: 30px;
     position: sticky;
@@ -42,7 +42,7 @@
     width: 235px;
 }
 
-.hearts_container {
+.hearts-container {
     display: flex;
     gap: 15px;
 }
@@ -92,27 +92,27 @@
         position: relative;
     }
 
-    .section_title {
+    .section-title {
         margin: 0;
         font-family: $font1-bold;
         font-size: $section-title;
     }
 
-    .section_subtitle {
+    .section-subtitle {
         margin: 0;
         font-family: $font1-thin;
         font-size: $section-subtitle;
     }
    
-    .card_title {
+    .card-title {
         font-size: $card-title;
     }
 
-    .card_description {
+    .card-description {
         font-size: $card-description;
     } 
     
-    .card_text {
+    .card-text {
         @include column-direction;
         gap: 5px;
     }
@@ -121,11 +121,11 @@
         font-size: $text;
     }
 
-    .card_content {
+    .card-content {
         @include row-direction
     }
     
-    .card_link {
+    .card-link {
         display: block;
         width: 100%;
         height: 100%;
@@ -150,7 +150,7 @@
         }
     }
 
-    .location__text {
+    .location .text {
         font-family: $font1-medium;
     }
 
@@ -159,35 +159,31 @@
     .ban {
         background-color: $background-color1;
         padding: 40px 20px 57px;
-        &__title {
-            @include text-center;
-        }
-    }
-
-    .ban__content {
-        @include column-center-direction;
-        text-align: center;
-        &__subtitle {
-            @include text-center;
-            margin: 15px 0 27px;
-            font-family: $font1-thin;
+        &__content {
+            @include column-center-direction;
+            text-align: center;
         } 
     }
+
+    .ban__content .section-subtitle {
+        @include text-center;
+        margin: 15px 0 27px;
+        font-family: $font1-thin;
+    } 
     
     // FUCTIONNING SECTION //
     
     .functioning {
         padding: 48px 25px 68px; 
-        &__card {
-            position: relative;
-            padding: 27px 25px 27px 29px;
-            margin-top: 26px;border-radius: 20px;
-            background-color: $background-color4;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-        }
     }
 
-    .functioning__card__number {
+    .functioning__card {
+        position: relative;
+        padding: 27px 25px 27px 29px;
+        margin-top: 26px;border-radius: 20px;
+        background-color: $background-color4;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        & > .icon-number {
             padding: 4px 8px;
             background-color:$color1;
             font-family: $font1-medium;
@@ -198,8 +194,9 @@
             left: 0;
             transform: translateX(-50%);
         }
+    }
 
-    .functioning__card__text {
+    .functioning__card .text {
         margin: 0 0 0 25px;
     }
     
@@ -208,7 +205,7 @@
     .restaurants {
         padding: 55px 25px 66px;
         background-color: $background-color2;
-        &__cards_container {
+        &__cards-container {
             margin-top: 25px;
             @include column-direction;
             gap: 40px;
@@ -249,7 +246,7 @@
         color: $text-color1;
     }
 
-    .title-container {
+    .card-title-container {
         @include row-direction;
         justify-content: space-between;        
         & > .card-title {
@@ -258,12 +255,12 @@
         }
     }
 
-    .restaurants__card__subtitle {
+    .restaurants .card-description {
         font-family: $font1-thin;
         margin: 0;
     }
 
-    .icon__container {
+    .icon-like {
         position: relative;
     }
 
@@ -292,18 +289,18 @@
             margin: 0 auto;
             width: 90%;
         }
-        &__cards_container {
-            display: flex;
-            justify-content: space-between;
-            gap: 25px;
+    }
+    
+    .functionning__cards-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        & > .functioning__card {
+            @include row-direction;        
+            width: 100%;
+            margin-left: 13px;
+            padding: 27px 25px;
         }
-    }  
-
-    .functioning__card {
-        @include row-direction;        
-        width: 100%;
-        margin-left: 13px;
-        padding: 27px 25px;
     }
 
     // RESTAURANTS SECTION //
@@ -314,11 +311,12 @@
             margin: 0 auto;
             width: 90%;
         }  
-        &__cards_container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px 60px;
-        }
+    }
+
+    .restaurants__cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 60px;
     }
 }
 
@@ -328,22 +326,21 @@
 
     .functioning {
         padding: 48px 0 68px;
-        
         &__container {
             margin: 0 auto;
             width: 75%;
         }
-        &__cards_container {
-            display: flex;
-            justify-content: space-between;
-            gap: 25px;
-        }
     }
 
-    .functioning__card {
-        @include row-direction;        
-        width: 100%;
-        margin-left: 13px;
+    .functionning__cards-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        & > .functionning__card {
+            @include row-direction;        
+            width: 100%;
+            margin-left: 13px;
+        }
     }
 
     // RESTAURANTS SECTION //
@@ -354,11 +351,12 @@
             margin: 0 auto;
             width: 75%;
         }
-        &__cards_container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px 100px;
-        }
+    }
+
+    .restaurants__cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px 100px;
     }
 }
 

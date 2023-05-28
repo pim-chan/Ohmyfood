@@ -1,17 +1,16 @@
-.icon__container {
+.icon {
     position: relative;
     z-index: 1;
+    &__like {
+        width: 22px;
+        overflow: visible;
+        stroke-width: 15px;
+        fill: transparent;
+        stroke: black;
+    }
 }
 
-.icon__like {
-    width: 22px;
-    overflow: visible;
-    stroke-width: 15px;
-    fill: transparent;
-    stroke: black;
-}
-
-.checkbox-hidden {
+.icon__checkbox-hidden {
     width: 22px;
     height: 22px;
     margin: 0;
@@ -19,7 +18,7 @@
     opacity: 0;
 }
 
-.checkbox-hidden:checked + .icon__like {
+.icon__checkbox-hidden:checked + .icon__like {
     fill: url(#LinearGradient);
     stroke: url(#LinearGradient);
 }

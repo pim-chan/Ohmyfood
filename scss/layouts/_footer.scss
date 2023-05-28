@@ -4,7 +4,7 @@
     background-color: $color3;
     color: $color2;
     padding: 22px 25px;
-    .footer__title {
+    &__title {
         font-family: $font2;
         font-size: $section-subtitle;
         margin: 0 0 16px;
