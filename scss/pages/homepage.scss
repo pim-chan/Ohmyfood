@@ -249,20 +249,18 @@
         color: $text-color1;
     }
 
-    .restaurant__card__title__container {
+    .title-container {
         @include row-direction;
-        justify-content: space-between;
-    }
-
-    .restaurants__card {
-        &__title {
+        justify-content: space-between;        
+        & > .card-title {
             font-family: $font1-bold;
             margin: 0;
         }
-            &__subtitle {
-            font-family: $font1-thin;
-            margin: 0;
-        }
+    }
+
+    .restaurants__card__subtitle {
+        font-family: $font1-thin;
+        margin: 0;
     }
 
     .icon__container {

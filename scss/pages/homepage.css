@@ -153,7 +153,7 @@
   stroke: black;
 }
 
-.checkbox--hidden {
+.checkbox-hidden {
   width: 22px;
   height: 22px;
   margin: 0;
@@ -161,7 +161,7 @@
   opacity: 0;
 }
 
-.checkbox--hidden:checked + .icon__like {
+.checkbox-hidden:checked + .icon__like {
   fill: url(#LinearGradient);
   stroke: url(#LinearGradient);
 }
@@ -412,17 +412,17 @@ header {
   color: black;
 }
 
-.restaurant__card__title__container {
+.title-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-
-.restaurants__card__title {
+.title-container > .card-title {
   font-family: font1-bold, sans-serif;
   margin: 0;
 }
+
 .restaurants__card__subtitle {
   font-family: font1-thin, sans-serif;
   margin: 0;
