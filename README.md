@@ -11,7 +11,7 @@ carte !
 ## Versions disponibles :
 - Mobile 
 - Tablettes
-- Ordinateurs
+- Desktop
 - Grands écrans 
 
 ## Auteurs : 
