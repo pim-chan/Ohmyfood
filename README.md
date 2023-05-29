@@ -8,6 +8,12 @@ carte !
 - HTML5/CSS3
 - SASS
 
+## Versions disponibles :
+- Mobile 
+- Tablettes
+- Ordinateurs
+- Grands écrans 
+
 ## Auteurs : 
 Paul, T. Chloé
 
