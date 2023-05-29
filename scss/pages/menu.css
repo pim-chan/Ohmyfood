@@ -39,6 +39,7 @@
 }
 .btn--active:hover {
   opacity: 0.85;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.406);
 }
 
 .icon {
@@ -208,6 +209,7 @@ h1, h2, h3, h4, p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
+  animation: delayedAppearance 1.5s forwards;
 }
 .menu__title > h1 {
   margin: 0;
@@ -222,7 +224,7 @@ h1, h2, h3, h4, p {
   gap: 40px;
   margin-top: 40px;
 }
-.menu__categories-container > .menu__category__title {
+.menu__categories-container .menu__category__title {
   width: 40px;
   font-family: font1-thin, sans-serif;
   font-size: 1rem;
@@ -231,6 +233,34 @@ h1, h2, h3, h4, p {
   border-bottom: 3px solid #99E2D0;
 }
 
+.menu__category {
+  opacity: 0;
+  animation: delayedAppearance 1.5s forwards;
+}
+
+.menu__category:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.menu__category:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.menu__category:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+@keyframes delayedAppearance {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .dish-card {
   display: flex;
   margin-top: 12px;
