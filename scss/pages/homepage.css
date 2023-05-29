@@ -93,7 +93,7 @@
     gap: 30px;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   .footer {
     padding: 64px 50px 30px;
   }
@@ -168,13 +168,13 @@
 .loading {
   height: 100%;
   width: 100%;
-  animation: loading 5s 1;
+  animation: loadingPage 5s 1;
   position: absolute;
   background-color: white;
   opacity: 0;
 }
 
-@keyframes loading {
+@keyframes loadingPage {
   0%, 99% {
     opacity: 1;
     z-index: 2;
@@ -428,18 +428,43 @@ header {
   position: relative;
 }
 
-@media (min-width: 768px) and (max-width: 999px) {
+/* Medium devices (tablets protrait mode and pc */
+@media (min-width: 768px) and (max-width: 1023.99px) {
   .ban {
     padding: 50px 20px 70px;
   }
   .functioning {
     padding: 48px 100px 68px;
   }
+  .functioning .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .functioning__cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .functioning__card .icon-number {
+    top: -15px;
+    left: 50%;
+  }
+  .functioning__card .card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   .restaurants {
     padding: 55px 75px 66px;
   }
+  .restaurants .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 }
-@media (min-width: 1000px) and (max-width: 1212px) {
+/* Large devices (tablets paysage mode and pc) */
+@media (min-width: 1024px) and (max-width: 1439.99px) {
   .functioning {
     padding: 48px 0 68px;
   }
@@ -447,12 +472,12 @@ header {
     margin: 0 auto;
     width: 90%;
   }
-  .functionning__cards-container {
+  .functioning__cards-container {
     display: flex;
     justify-content: space-between;
     gap: 25px;
   }
-  .functionning__cards-container > .functioning__card {
+  .functioning__cards-container > .functioning__card {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -473,7 +498,8 @@ header {
     gap: 40px 60px;
   }
 }
-@media (min-width: 1213px) {
+/* Very Large devices (pc and bigger screens) */
+@media (min-width: 1440px) {
   .functioning {
     padding: 48px 0 68px;
   }
@@ -481,12 +507,12 @@ header {
     margin: 0 auto;
     width: 75%;
   }
-  .functionning__cards-container {
+  .functioning__cards-container {
     display: flex;
     justify-content: space-between;
     gap: 25px;
   }
-  .functionning__cards-container > .functionning__card {
+  .functioning__cards-container > .functioning__card {
     display: flex;
     flex-direction: row;
     align-items: center;

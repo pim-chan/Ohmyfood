@@ -10,13 +10,13 @@
 .loading {
     height: 100%;
     width: 100%;
-    animation: loading 5s 1;
+    animation: loadingPage 5s 1;
     position: absolute;
     background-color: white;
     opacity: 0;
 }
 
-@keyframes loading {
+@keyframes loadingPage {
     0%,99%{
         opacity: 1;
         z-index: 2;
@@ -264,22 +264,47 @@
         position: relative;
     }
 
-@media (min-width:768px) and (max-width:999px) {
+/* Medium devices (tablets protrait mode and pc */
+@media (min-width:768px) and (max-width:1023.99px) {
 
     .ban {
         padding: 50px 20px 70px;
     }
 
     .functioning {
-        padding: 48px 100px 68px; 
+        padding: 48px 100px 68px;     
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }  
+    } 
+    
+    .functioning__cards-container {
+        @include column-direction; 
+        gap: 30px;
+    }
+
+    .functioning__card .icon-number {
+        top: -15px;
+        left: 50%;
+    }
+
+    .functioning__card .card-content {
+        @include row-center-direction;
     }
 
     .restaurants {
         padding: 55px 75px 66px;
     }
+
+    .restaurants .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 }
 
-@media (min-width: 1000px) and (max-width:1212px) {
+/* Large devices (tablets paysage mode and pc) */
+@media (min-width: 1024px) and (max-width:1439.99px) {
 
     // FUCTIONNING SECTION //
 
@@ -291,7 +316,7 @@
         }
     }
     
-    .functionning__cards-container {
+    .functioning__cards-container {
         display: flex;
         justify-content: space-between;
         gap: 25px;
@@ -320,7 +345,8 @@
     }
 }
 
-@media (min-width: 1213px) {
+/* Very Large devices (pc and bigger screens) */
+@media (min-width: 1440px) {
 
     // FUCTIONNING SECTION //
 
@@ -332,11 +358,11 @@
         }
     }
 
-    .functionning__cards-container {
+    .functioning__cards-container {
         display: flex;
         justify-content: space-between;
         gap: 25px;
-        & > .functionning__card {
+        & > .functioning__card {
             @include row-direction;        
             width: 100%;
             margin-left: 13px;

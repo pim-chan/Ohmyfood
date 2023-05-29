@@ -153,7 +153,8 @@ h1, h2, h3, h4, p {
     margin: 0 auto ;
 }
 
-@media (min-width: 768px) {
+/* Medium devices (tablets protrait mode and pc */
+@media (min-width:768px) and (max-width:1023.99px) {
     .ban {
         height: 383px;
     }
@@ -181,7 +182,8 @@ h1, h2, h3, h4, p {
     }
 }
 
-@media (min-width: 1000px) {
+/* Large and bigger devices (tablets paysage mode, pc and bigger screen) */
+@media (min-width: 1024px) {
     .ban {
         height: 383px;
     }
