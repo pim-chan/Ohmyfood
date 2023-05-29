@@ -9,6 +9,6 @@ carte !
 - SASS
 
 ## Auteurs : 
-T. Chloé
+Paul, T. Chloé
 
 
