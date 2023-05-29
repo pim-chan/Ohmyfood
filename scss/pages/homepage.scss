@@ -4,7 +4,6 @@
 @use '../utils' as *;
 @use'../components' as *;
 
-
 // LOADING PAGE //
 
 .loading {
@@ -27,7 +26,6 @@
         z-index: -1;
     }
 }
-
 
 .loading-container{
     @include column-center-direction;
