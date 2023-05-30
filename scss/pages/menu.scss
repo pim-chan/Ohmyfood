@@ -157,7 +157,7 @@ h1, h2, h3, h4, p {
     border-radius: 0px 15px 15px 0px;
     position: relative;
     &:after {
-        content: url(/assets/images/icons/Check.png);
+        content: url(../../assets/images/icons/Check.png);
         position: absolute;
         top: 50%;
         left: 50%;
