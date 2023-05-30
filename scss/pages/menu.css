@@ -364,9 +364,6 @@ h1, h2, h3, h4, p {
   .menu__title {
     text-align: center;
   }
-  .dish-card__checkbox-hidden:hover + .slide_content {
-    width: 110px;
-  }
 }
 /* Large and bigger devices (tablets paysage mode, pc and bigger screen) */
 @media (min-width: 1024px) {
