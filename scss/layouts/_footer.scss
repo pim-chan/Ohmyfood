@@ -16,8 +16,7 @@
     margin: 0;
     padding: 0;
     @include column-direction;
-    gap: 10px;    
-    
+    gap: 10px;   
     :nth-child(1) {
         font-family: $font1-bold;
         &::before {
@@ -25,7 +24,6 @@
             margin-right: 11px;
         }
     }
-
     :nth-child(2) {
         font-family: $font1-bold;
         &::before {
@@ -44,14 +42,13 @@
             gap: 20px;
         }
     }
-
     .footer__title {
         margin: 0;
     }
-
     .footer__list {
         @include row-direction;
-        gap: 30px;    
+        gap: 30px;   
+        white-space: nowrap;   
     }
 }
 
@@ -73,6 +70,7 @@
     .footer__list {
         @include row-center-direction;
         gap: 20px; 
+        white-space: nowrap;  
         :nth-child(2) {
             margin-right: 30px;
         }  

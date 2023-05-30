@@ -140,6 +140,7 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
+    white-space: nowrap;
   }
 }
 @media (min-width: 1024px) {
@@ -161,6 +162,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    white-space: nowrap;
   }
   .footer__list :nth-child(2) {
     margin-right: 30px;
