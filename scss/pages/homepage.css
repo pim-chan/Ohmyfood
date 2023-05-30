@@ -358,6 +358,7 @@ header {
 }
 
 .functioning__card .text {
+  font-family: font1-medium, sans-serif;
   margin: 0 0 0 25px;
 }
 
